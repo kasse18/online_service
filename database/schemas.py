@@ -53,7 +53,7 @@ class PostCreate(PostBase):
 
 class Post(PostBase):
     id: int
-    author: str
+    author_id: int
     tags: List[str]
 
     class Config:
