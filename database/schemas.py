@@ -12,13 +12,12 @@ class UserCreate(UserBase):
 
 
 class UserUpdate(UserBase):
-    login: str
-    tags: []
+    tags: List[str]
 
 
 class User(UserBase):
     id: int
-    tags: []
+    tags: List[str]
 
     class Config:
         orm_mode = True
@@ -45,8 +44,7 @@ class PostBase(BaseModel):
 
 
 class PostUpdate(PostBase):
-    name: str
-    tags: []
+    tags: List[str]
 
 
 class PostCreate(PostBase):
@@ -56,7 +54,7 @@ class PostCreate(PostBase):
 class Post(PostBase):
     id: int
     author: str
-    tags: []
+    tags: List[str]
 
     class Config:
         orm_mode = True
